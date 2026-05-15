@@ -1,0 +1,482 @@
+[
+  {
+    "id": "case-0001",
+    "email_text": "Hi, I was charged twice for my Pro subscription this month. Both charges show on my credit card statement dated the 3rd. Please refund one of them.",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["charged", "twice", "refund"],
+    "difficulty": "easy",
+    "notes": "Classic duplicate charge — baseline billing case"
+  },
+  {
+    "id": "case-0002",
+    "email_text": "The CSV export button on the analytics dashboard stopped working two days ago. Clicking it does nothing. Chrome console shows: Uncaught TypeError: Cannot read properties of undefined.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["export", "broken", "error"],
+    "difficulty": "easy",
+    "notes": "Clear bug report with console error"
+  },
+  {
+    "id": "case-0003",
+    "email_text": "I forgot my password and the reset email never arrives. I've checked spam. My email is jane@company.com.",
+    "expected_category": "account",
+    "expected_summary_keywords": ["password", "reset", "email"],
+    "difficulty": "easy",
+    "notes": "Standard password reset failure"
+  },
+  {
+    "id": "case-0004",
+    "email_text": "Would it be possible to add a dark mode to the dashboard? Many of us work late and the bright white is hard on the eyes.",
+    "expected_category": "general",
+    "expected_summary_keywords": ["dark mode", "feature request"],
+    "difficulty": "easy",
+    "notes": "Feature request — clearly general"
+  },
+  {
+    "id": "case-0005",
+    "email_text": "My invoice from last month shows $299 but my plan is $199/month. There must be an error. Can you explain this charge?",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["invoice", "overcharged", "explain"],
+    "difficulty": "easy",
+    "notes": "Billing discrepancy inquiry"
+  },
+  {
+    "id": "case-0006",
+    "email_text": "We're getting 429 rate limit errors on your API starting around 9am UTC today. We haven't changed our request volume. Is there an outage?",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["rate limit", "API", "outage"],
+    "difficulty": "easy",
+    "notes": "API rate limit / potential outage report"
+  },
+  {
+    "id": "case-0007",
+    "email_text": "I need to transfer ownership of our workspace to a new admin. The current owner is leaving the company next Friday.",
+    "expected_category": "account",
+    "expected_summary_keywords": ["ownership", "transfer", "admin"],
+    "difficulty": "easy",
+    "notes": "Workspace ownership transfer"
+  },
+  {
+    "id": "case-0008",
+    "email_text": "Just wanted to say the new reporting features you shipped last week are excellent. Saved our team hours every week.",
+    "expected_category": "general",
+    "expected_summary_keywords": ["feedback", "positive", "reporting"],
+    "difficulty": "easy",
+    "notes": "Positive feedback — no action needed, general bucket"
+  },
+  {
+    "id": "case-0009",
+    "email_text": "We cancelled our subscription 3 weeks ago but you charged us again this month. This is unacceptable. Refund immediately.",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["cancelled", "charged", "refund"],
+    "difficulty": "easy",
+    "notes": "Post-cancellation charge"
+  },
+  {
+    "id": "case-0010",
+    "email_text": "Your Slack integration keeps disconnecting every few hours. We reconnect and it drops again within a day. Happening since your update on the 12th.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["Slack", "integration", "disconnecting"],
+    "difficulty": "easy",
+    "notes": "Integration reliability bug"
+  },
+  {
+    "id": "case-0011",
+    "email_text": "I can't log in. It just says 'invalid credentials' but I know my password is correct. I just used it yesterday.",
+    "expected_category": "account",
+    "expected_summary_keywords": ["login", "invalid credentials"],
+    "difficulty": "easy",
+    "notes": "Login failure — no password reset requested yet"
+  },
+  {
+    "id": "case-0012",
+    "email_text": "How does the audit log feature work? I can't find documentation on filtering by user.",
+    "expected_category": "general",
+    "expected_summary_keywords": ["audit log", "documentation", "filter"],
+    "difficulty": "easy",
+    "notes": "General how-to question"
+  },
+  {
+    "id": "case-0013",
+    "email_text": "I signed up for the annual plan but the payment failed partway through. Now my account shows both a pending charge and a free trial. Very confused about my billing status.",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["payment failed", "annual plan", "billing status"],
+    "difficulty": "medium",
+    "notes": "Ambiguous — could touch account but core issue is billing/payment"
+  },
+  {
+    "id": "case-0014",
+    "email_text": "Our SSO login via Okta broke after your maintenance window last night. Users get a SAML assertion error. This is affecting 200+ people.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["SSO", "Okta", "SAML", "broken"],
+    "difficulty": "medium",
+    "notes": "SSO is both technical and account-adjacent — technical wins (it's a bug)"
+  },
+  {
+    "id": "case-0015",
+    "email_text": "My colleague sent me an invite to join the workspace but when I click the link it says the invitation has expired. Can you resend it or fix the link?",
+    "expected_category": "account",
+    "expected_summary_keywords": ["invite", "expired", "workspace"],
+    "difficulty": "medium",
+    "notes": "Expired invite — account not technical (no bug, expected TTL behavior)"
+  },
+  {
+    "id": "case-0016",
+    "email_text": "We're evaluating your enterprise plan and have questions about custom data retention policies and SOC 2 compliance docs.",
+    "expected_category": "general",
+    "expected_summary_keywords": ["enterprise", "compliance", "SOC 2"],
+    "difficulty": "medium",
+    "notes": "Sales/compliance inquiry — general; not billing because no purchase yet"
+  },
+  {
+    "id": "case-0017",
+    "email_text": "Pls help asap!! cant login and big presentation in 1 hour!!",
+    "expected_category": "account",
+    "expected_summary_keywords": ["login", "urgent"],
+    "difficulty": "medium",
+    "notes": "Edge case: very short, typos, extreme urgency — must still classify correctly"
+  },
+  {
+    "id": "case-0018",
+    "email_text": "The webhooks we set up for order events stopped firing sometime yesterday. Our fulfillment system is now out of sync. Payload logs show nothing after 14:32 UTC.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["webhook", "stopped", "fulfillment"],
+    "difficulty": "medium",
+    "notes": "Webhook outage with business impact"
+  },
+  {
+    "id": "case-0019",
+    "email_text": "I upgraded to the Business plan yesterday to unlock API access, but the API section in my dashboard still shows as locked.",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["upgraded", "API access", "locked", "plan"],
+    "difficulty": "medium",
+    "notes": "Tricky: looks technical but root cause is billing/plan entitlement"
+  },
+  {
+    "id": "case-0020",
+    "email_text": "We have a HIPAA BAA requirement for our healthcare clients. Does your platform support this? Who do I contact to arrange it?",
+    "expected_category": "general",
+    "expected_summary_keywords": ["HIPAA", "BAA", "compliance"],
+    "difficulty": "medium",
+    "notes": "Compliance question — general/sales, not account (no existing account issue)"
+  },
+  {
+    "id": "case-0021",
+    "email_text": "Hi, charging issue, need help.",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["billing", "issue"],
+    "difficulty": "hard",
+    "notes": "Extremely sparse — model must infer from minimal signal"
+  },
+  {
+    "id": "case-0022",
+    "email_text": "Your system is broken. Fix it.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["broken", "fix"],
+    "difficulty": "hard",
+    "notes": "Hostile, no specifics — technical is best guess but ambiguous"
+  },
+  {
+    "id": "case-0023",
+    "email_text": "I need to cancel my account and get a refund for this month because I was never able to get the integration working despite trying for 3 weeks with your support.",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["cancel", "refund", "integration"],
+    "difficulty": "hard",
+    "notes": "Multi-issue: billing (refund/cancel) + technical (integration). Billing wins as the explicit request."
+  },
+  {
+    "id": "case-0024",
+    "email_text": "El botón de exportar no funciona en nuestro panel. Por favor arreglen esto pronto.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["export", "broken"],
+    "difficulty": "hard",
+    "notes": "Non-English (Spanish) — export button broken"
+  },
+  {
+    "id": "case-0025",
+    "email_text": "I think there might be an unauthorized login to my account? I got an email about a login from Singapore but I'm in London.",
+    "expected_category": "account",
+    "expected_summary_keywords": ["unauthorized", "login", "security"],
+    "difficulty": "hard",
+    "notes": "Security incident — account category, not technical"
+  },
+  {
+    "id": "case-0026",
+    "email_text": "Not sure if this is a bug or I'm doing it wrong, but when I filter reports by date range and export to PDF, the PDF always shows last month's data regardless of the filter I set.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["filter", "PDF", "wrong data"],
+    "difficulty": "hard",
+    "notes": "Subtle bug — user unsure if their fault; still a bug"
+  },
+  {
+    "id": "case-0027",
+    "email_text": "Been a customer for 3 years. Prices keep going up. Not renewing this year. Just letting you know.",
+    "expected_category": "general",
+    "expected_summary_keywords": ["cancellation intent", "pricing", "feedback"],
+    "difficulty": "hard",
+    "notes": "Implicit churn signal — no billing transaction, no account action requested; general/feedback"
+  },
+  {
+    "id": "case-0028",
+    "email_text": "Our data processing jobs have been running 10x slower since Monday. No config changes on our end. Is there a infrastructure issue?",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["slow", "performance", "infrastructure"],
+    "difficulty": "medium",
+    "notes": "Performance regression report"
+  },
+  {
+    "id": "case-0029",
+    "email_text": "We need to add 15 more seats to our plan before our all-hands next week. How do I do this and will we be prorated?",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["seats", "add", "proration"],
+    "difficulty": "easy",
+    "notes": "Seat expansion + billing question"
+  },
+  {
+    "id": "case-0030",
+    "email_text": "Two-factor authentication is not sending the SMS code to my phone. I've tried 3 times. My number is verified in the account.",
+    "expected_category": "account",
+    "expected_summary_keywords": ["2FA", "SMS", "not sending"],
+    "difficulty": "medium",
+    "notes": "2FA failure — account not technical (config/delivery issue)"
+  },
+  {
+    "id": "case-0031",
+    "email_text": "Is there a way to set up automatic monthly reports to be emailed to our executive team? We currently do this manually.",
+    "expected_category": "general",
+    "expected_summary_keywords": ["automated", "reports", "email"],
+    "difficulty": "easy",
+    "notes": "How-to / feature question"
+  },
+  {
+    "id": "case-0032",
+    "email_text": "Your API response times have degraded from ~200ms to ~2000ms over the past week. Our SLA with our clients requires sub-500ms. This is critical.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["API", "latency", "SLA", "degraded"],
+    "difficulty": "medium",
+    "notes": "Performance SLA violation"
+  },
+  {
+    "id": "case-0033",
+    "email_text": "I see I was charged an overage fee this month. I didn't realize we'd exceeded the limit. Can you waive it this once as a courtesy?",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["overage", "waive", "fee"],
+    "difficulty": "easy",
+    "notes": "Overage fee waiver request"
+  },
+  {
+    "id": "case-0034",
+    "email_text": "I'd like to change the email address on my account from old@company.com to new@company.com. How do I do this?",
+    "expected_category": "account",
+    "expected_summary_keywords": ["email", "change", "account"],
+    "difficulty": "easy",
+    "notes": "Email update — pure account management"
+  },
+  {
+    "id": "case-0035",
+    "email_text": "The mobile app crashes immediately when I try to open any report on iOS 17.4. It was working fine on 17.3.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["crash", "iOS", "mobile app"],
+    "difficulty": "easy",
+    "notes": "Version-specific iOS crash"
+  },
+  {
+    "id": "case-0036",
+    "email_text": "We're a nonprofit. Do you offer discounted pricing for nonprofit organizations?",
+    "expected_category": "general",
+    "expected_summary_keywords": ["nonprofit", "discount", "pricing"],
+    "difficulty": "easy",
+    "notes": "Pricing inquiry — general (pre-purchase)"
+  },
+  {
+    "id": "case-0037",
+    "email_text": "My team members say they can see each other's private notes. This should not be happening. Is this a permissions bug?",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["permissions", "private", "bug", "data leak"],
+    "difficulty": "hard",
+    "notes": "Privacy/permissions bug — severe; technical not account"
+  },
+  {
+    "id": "case-0038",
+    "email_text": "I downgraded from Pro to Free last month but I'm still being billed at the Pro rate.",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["downgraded", "still charged", "Pro rate"],
+    "difficulty": "easy",
+    "notes": "Post-downgrade billing error"
+  },
+  {
+    "id": "case-0039",
+    "email_text": "Our LDAP sync stopped working after we updated our internal directory server. Users can no longer log in via SSO.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["LDAP", "SSO", "sync", "broken"],
+    "difficulty": "medium",
+    "notes": "LDAP/SSO technical failure — customer-side change but our integration broke"
+  },
+  {
+    "id": "case-0040",
+    "email_text": "How long does data stay in the system after account deletion? We need to understand this for GDPR compliance.",
+    "expected_category": "general",
+    "expected_summary_keywords": ["data retention", "deletion", "GDPR"],
+    "difficulty": "medium",
+    "notes": "GDPR / data retention question — general, not account (no deletion requested)"
+  },
+  {
+    "id": "case-0041",
+    "email_text": "Can't export. Getting error. Tried twice.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["export", "error"],
+    "difficulty": "hard",
+    "notes": "Minimal info, export error"
+  },
+  {
+    "id": "case-0042",
+    "email_text": "I need a copy of all invoices from 2023 for our annual audit. Can you send them to finance@company.com?",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["invoices", "2023", "audit"],
+    "difficulty": "easy",
+    "notes": "Invoice history request for audit"
+  },
+  {
+    "id": "case-0043",
+    "email_text": "The search function returns different results for the same query depending on which team member runs it. This is causing inconsistencies in our work.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["search", "inconsistent", "results"],
+    "difficulty": "hard",
+    "notes": "Non-deterministic search — subtle bug that's hard to reproduce"
+  },
+  {
+    "id": "case-0044",
+    "email_text": "I've been locked out of my account after too many failed login attempts. Please unlock it.",
+    "expected_category": "account",
+    "expected_summary_keywords": ["locked out", "failed attempts", "unlock"],
+    "difficulty": "easy",
+    "notes": "Account lockout — classic account case"
+  },
+  {
+    "id": "case-0045",
+    "email_text": "We're migrating to a new payment method (wire transfer instead of credit card). Who do I contact to set this up for our annual invoice?",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["payment method", "wire transfer", "invoice"],
+    "difficulty": "medium",
+    "notes": "Payment method change — billing"
+  },
+  {
+    "id": "case-0046",
+    "email_text": "Compliments to your engineering team. The new dashboard load times are dramatically faster. Whatever you shipped last week made a huge difference.",
+    "expected_category": "general",
+    "expected_summary_keywords": ["compliment", "performance", "faster"],
+    "difficulty": "easy",
+    "notes": "Positive engineering feedback"
+  },
+  {
+    "id": "case-0047",
+    "email_text": "I think I was overcharged but honestly I'm not sure. My bill looks higher than usual but I haven't had time to check my usage.",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["overcharged", "bill", "higher"],
+    "difficulty": "hard",
+    "notes": "Uncertain billing complaint — hedge language but intent is billing inquiry"
+  },
+  {
+    "id": "case-0048",
+    "email_text": "Our account manager Sarah left the company. We need to update the primary contact on the account to our new manager, Tom.",
+    "expected_category": "account",
+    "expected_summary_keywords": ["contact", "update", "account manager"],
+    "difficulty": "easy",
+    "notes": "Primary contact change"
+  },
+  {
+    "id": "case-0049",
+    "email_text": "The Zapier integration is not triggering when new records are created. It worked for 6 months and just stopped yesterday.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["Zapier", "trigger", "stopped"],
+    "difficulty": "easy",
+    "notes": "Integration stopped working"
+  },
+  {
+    "id": "case-0050",
+    "email_text": "We're about to sign a 3-year contract and want to understand your uptime SLA guarantees and historical incident data.",
+    "expected_category": "general",
+    "expected_summary_keywords": ["SLA", "uptime", "contract"],
+    "difficulty": "medium",
+    "notes": "Pre-sales reliability inquiry — general"
+  },
+  {
+    "id": "case-0051",
+    "email_text": "Billed wrong amount. Account broken. Can't login. Extremely frustrated.",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["billing", "login", "multiple issues"],
+    "difficulty": "hard",
+    "notes": "Multiple issues listed — billing is first and most explicit"
+  },
+  {
+    "id": "case-0052",
+    "email_text": "After your system maintenance last night, all of our custom dashboards were reset to default. Three months of configuration gone.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["maintenance", "dashboards", "reset", "data loss"],
+    "difficulty": "medium",
+    "notes": "Post-maintenance data loss — technical"
+  },
+  {
+    "id": "case-0053",
+    "email_text": "We need to give read-only access to our auditors for the next 30 days. They should only see reports, not settings.",
+    "expected_category": "account",
+    "expected_summary_keywords": ["read-only", "auditor", "permissions"],
+    "difficulty": "medium",
+    "notes": "Permission/access management — account"
+  },
+  {
+    "id": "case-0054",
+    "email_text": "Nous n'arrivons pas à nous connecter depuis ce matin. Toute l'équipe est bloquée.",
+    "expected_category": "account",
+    "expected_summary_keywords": ["login", "blocked", "team"],
+    "difficulty": "hard",
+    "notes": "French — team-wide login failure"
+  },
+  {
+    "id": "case-0055",
+    "email_text": "Is it possible to export our entire data history before we close our account? We want to keep records.",
+    "expected_category": "account",
+    "expected_summary_keywords": ["export", "data", "close account"],
+    "difficulty": "hard",
+    "notes": "Pre-cancellation data export — account (not billing, no refund; not technical, working feature)"
+  },
+  {
+    "id": "case-0056",
+    "email_text": "The bulk import tool silently skipped 40% of our rows with no error message. We only noticed because our record count was off.",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["import", "skipped", "silent failure"],
+    "difficulty": "medium",
+    "notes": "Silent data import failure — serious technical bug"
+  },
+  {
+    "id": "case-0057",
+    "email_text": "I've been charged for a user seat that was deleted 4 months ago. This has been happening every month and I want reimbursement for all 4 months.",
+    "expected_category": "billing",
+    "expected_summary_keywords": ["deleted user", "charged", "reimbursement"],
+    "difficulty": "medium",
+    "notes": "Ghost seat billing — multi-month overcharge"
+  },
+  {
+    "id": "case-0058",
+    "email_text": "We'd love a way to set custom branding on the reports we share with clients — our logo, our colors. Any plans for this?",
+    "expected_category": "general",
+    "expected_summary_keywords": ["branding", "custom", "feature request"],
+    "difficulty": "easy",
+    "notes": "White-label feature request"
+  },
+  {
+    "id": "case-0059",
+    "email_text": "I need to verify that our data is stored in EU data centers only. We have a German client with strict residency requirements.",
+    "expected_category": "general",
+    "expected_summary_keywords": ["data residency", "EU", "compliance"],
+    "difficulty": "medium",
+    "notes": "Data residency compliance question — general/sales"
+  },
+  {
+    "id": "case-0060",
+    "email_text": "idk if this is a bug or what but sometimes when i save a report it disappears and i have to redo it. happened like 5 times now",
+    "expected_category": "technical",
+    "expected_summary_keywords": ["save", "disappears", "report", "bug"],
+    "difficulty": "hard",
+    "notes": "Intermittent data loss bug, casual language, uncertain framing — still technical"
+  }
+]

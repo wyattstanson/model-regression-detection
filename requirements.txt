@@ -1,0 +1,28 @@
+
+python-dotenv==1.0.1
+pydantic==2.7.1
+pydantic-settings==2.3.3
+
+
+openai==1.30.5
+
+
+
+
+requests==2.32.3       # Slack webhook + GitHub PR comment
+
+
+streamlit==1.35.0
+plotly==5.22.0
+pandas==2.2.2
+
+
+pyyaml==6.0.1
+
+
+click==8.1.7           # CLI flags in ci_run.py
+
+
+pytest==8.2.2
+pytest-cov==5.0.0
+ruff==0.4.8            
