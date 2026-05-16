@@ -7,7 +7,7 @@ and returns a structured EvalRun ready for diffing.
 """
 
 from __future__ import annotations
-
+import os
 import asyncio
 import json
 import logging
