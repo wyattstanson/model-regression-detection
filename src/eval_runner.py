@@ -26,7 +26,7 @@ from src.models import EvalCase, PromptConfig, EmailCategory
 
 logger = logging.getLogger(__name__)
 
-DB_PATH = Path(__file__).parent.parent / "reports" / "eval_runs.db"
+DB_PATH = Path(os.getenv("DATABASE_URL", str(Path(__file__).parent.parent / "data" / "demo.db")))
 GOLDEN_DATASET_PATH = Path(__file__).parent.parent / "golden_dataset" / "cases.json"
 
 
