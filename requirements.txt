@@ -9,7 +9,7 @@ openai==1.30.5
 
 
 
-requests==2.32.3       # Slack webhook + GitHub PR comment
+requests==2.32.3       
 
 
 streamlit==1.35.0
@@ -20,7 +20,7 @@ pandas==2.2.2
 pyyaml==6.0.1
 
 
-click==8.1.7           # CLI flags in ci_run.py
+click==8.1.7          
 
 
 pytest==8.2.2

@@ -1,0 +1,7 @@
+.env
+.venv/
+.venv-1/
+data/evals.db
+reports/*.html
+__pycache__/
+*.pyc
