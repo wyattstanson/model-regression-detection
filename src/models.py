@@ -21,7 +21,11 @@ from typing import Optional
 from pydantic import BaseModel, Field, field_validator, model_validator
 
 
-
+class EmailCategory(str, Enum):
+    SPAM = "SPAM"
+    HAM = "HAM"
+    PHISHING = "PHISHING"
+    NEWSLETTER = "NEWSLETTER"
 
 class EmailLabel(str, Enum):
     SPAM      = "SPAM"
@@ -31,6 +35,7 @@ class EmailLabel(str, Enum):
     SUPPORT   = "SUPPORT"
     FEEDBACK  = "FEEDBACK"
     OTHER     = "OTHER"
+
 
 
 class RunStatus(str, Enum):
